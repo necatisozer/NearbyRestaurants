@@ -17,7 +17,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = ("project-name")
+rootProject.name = ("nearby-restaurants")
 
 include(
     "app",

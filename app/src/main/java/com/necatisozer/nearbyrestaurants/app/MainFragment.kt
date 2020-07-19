@@ -1,4 +1,4 @@
-package com.necatisozer.projectname.app
+package com.necatisozer.nearbyrestaurants.app
 
 import android.os.Bundle
 import android.view.View

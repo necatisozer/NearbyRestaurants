@@ -1,4 +1,4 @@
-package com.necatisozer.projectname.app
+package com.necatisozer.nearbyrestaurants.app
 
 import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint

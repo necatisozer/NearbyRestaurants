@@ -1,4 +1,4 @@
-package com.necatisozer.projectname.app
+package com.necatisozer.nearbyrestaurants.app
 
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject

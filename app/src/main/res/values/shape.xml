@@ -18,17 +18,17 @@
     <!--and cornerSizeBottomRight.-->
 
     <!--Shape Appearance for small components like chips, buttons, text fields and FABs-->
-    <style name="ShapeAppearance.ProjectName.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <style name="ShapeAppearance.NearbyRestaurants.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <!--Your custom shape here-->
     </style>
 
     <!--Shape Appearance for medium components like cards, alert dialogs-->
-    <style name="ShapeAppearance.ProjectName.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+    <style name="ShapeAppearance.NearbyRestaurants.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <!--Your custom shape here-->
     </style>
 
     <!--Shape Appearance for large components like side and bottom navigation drawers-->
-    <style name="ShapeAppearance.ProjectName.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+    <style name="ShapeAppearance.NearbyRestaurants.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
         <!--Your custom shape here-->
     </style>
 

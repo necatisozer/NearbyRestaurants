@@ -21,55 +21,55 @@
     <!--letterSpacing, etc. to define a custom appearance for each and see how they are -->
     <!--applied globally across your app.-->
 
-    <style name="TextAppearance.ProjectName.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+    <style name="TextAppearance.NearbyRestaurants.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
         <item name="fontFamily">@font/nunito_light</item>
     </style>
 
-    <style name="TextAppearance.ProjectName.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+    <style name="TextAppearance.NearbyRestaurants.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
         <item name="fontFamily">@font/nunito_light</item>
     </style>
 
-    <style name="TextAppearance.ProjectName.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+    <style name="TextAppearance.NearbyRestaurants.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
         <item name="fontFamily">@font/nunito</item>
     </style>
 
-    <style name="TextAppearance.ProjectName.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+    <style name="TextAppearance.NearbyRestaurants.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
         <item name="fontFamily">@font/nunito</item>
     </style>
 
-    <style name="TextAppearance.ProjectName.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+    <style name="TextAppearance.NearbyRestaurants.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="fontFamily">@font/nunito</item>
     </style>
 
-    <style name="TextAppearance.ProjectName.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+    <style name="TextAppearance.NearbyRestaurants.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="fontFamily">@font/nunito_semibold</item>
     </style>
 
-    <style name="TextAppearance.ProjectName.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+    <style name="TextAppearance.NearbyRestaurants.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="fontFamily">@font/nunito</item>
     </style>
 
-    <style name="TextAppearance.ProjectName.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+    <style name="TextAppearance.NearbyRestaurants.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="fontFamily">@font/nunito_semibold</item>
     </style>
 
-    <style name="TextAppearance.ProjectName.Body1" parent="TextAppearance.MaterialComponents.Body1">
+    <style name="TextAppearance.NearbyRestaurants.Body1" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">@font/nunito</item>
     </style>
 
-    <style name="TextAppearance.ProjectName.Body2" parent="TextAppearance.MaterialComponents.Body2">
+    <style name="TextAppearance.NearbyRestaurants.Body2" parent="TextAppearance.MaterialComponents.Body2">
         <item name="fontFamily">@font/nunito</item>
     </style>
 
-    <style name="TextAppearance.ProjectName.Button" parent="TextAppearance.MaterialComponents.Button">
+    <style name="TextAppearance.NearbyRestaurants.Button" parent="TextAppearance.MaterialComponents.Button">
         <item name="fontFamily">@font/nunito_semibold</item>
     </style>
 
-    <style name="TextAppearance.ProjectName.Caption" parent="TextAppearance.MaterialComponents.Caption">
+    <style name="TextAppearance.NearbyRestaurants.Caption" parent="TextAppearance.MaterialComponents.Caption">
         <item name="fontFamily">@font/nunito</item>
     </style>
 
-    <style name="TextAppearance.ProjectName.Overline" parent="TextAppearance.MaterialComponents.Overline">
+    <style name="TextAppearance.NearbyRestaurants.Overline" parent="TextAppearance.MaterialComponents.Overline">
         <item name="fontFamily">@font/nunito</item>
     </style>
 
