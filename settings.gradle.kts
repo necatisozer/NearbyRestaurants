@@ -23,5 +23,7 @@ include(
     "app",
     "library",
     "data",
-    "native-lib"
+    "native-lib",
+    "domain",
+    "core"
 )

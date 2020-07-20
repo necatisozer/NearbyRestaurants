@@ -48,9 +48,6 @@ android {
 }
 
 dependencies {
-    // Kotlin
-    implementation(kotlin("stdlib-jdk7"))
-
     // Java
     coreLibraryDesugaring(Dependencies.Tools.desugarJdkLibs)
 
@@ -58,6 +55,8 @@ dependencies {
     implementation(project(":library"))
     implementation(project(":data"))
     implementation(project(":native-lib"))
+    implementation(project(":domain"))
+    implementation(project(":core"))
 
     // AndroidX
     implementation(Dependencies.AndroidX.Activity.activity)

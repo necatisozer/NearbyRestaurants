@@ -21,4 +21,14 @@ object ProjectSettings {
         const val versionName = "1.0.0"
         const val versionCode = 1
     }
+
+    object Domain {
+        const val versionName = "1.0.0"
+        const val versionCode = 1
+    }
+
+    object Core {
+        const val versionName = "1.0.0"
+        const val versionCode = 1
+    }
 }

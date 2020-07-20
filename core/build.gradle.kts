@@ -1,8 +1,9 @@
-version = ProjectSettings.NativeLib.versionName
+version = ProjectSettings.Core.versionName
 
 plugins {
     id("com.android.library")
     kotlin("android")
+    kotlin("kapt")
     id("kotlin-android-extensions")
     id("maven-publish")
 }
@@ -14,8 +15,8 @@ android {
         minSdkVersion(SdkVersions.minSdkVersion)
         targetSdkVersion(SdkVersions.targetSdkVersion)
 
-        versionCode = ProjectSettings.NativeLib.versionCode
-        versionName = ProjectSettings.NativeLib.versionName
+        versionCode = ProjectSettings.Core.versionCode
+        versionName = ProjectSettings.Core.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -40,17 +41,28 @@ android {
         }
     }
 
-    externalNativeBuild {
-        cmake {
-            setPath("src/main/cpp/CMakeLists.txt")
-            version = "3.10.2"
-        }
-    }
-
     lintOptions {
         isWarningsAsErrors = true
         isAbortOnError = true
     }
+}
+
+dependencies {
+    // Kotlin
+    api(kotlin("stdlib-jdk7"))
+
+    // KotlinX
+    api((Dependencies.KotlinX.Coroutines.core))
+    api((Dependencies.KotlinX.Coroutines.android))
+
+    // Hilt
+    implementation(Dependencies.Dagger.hiltAndroid)
+    kapt(Dependencies.Dagger.hiltAndroidCompiler)
+
+    // Test
+    testImplementation(Dependencies.JUnit.jUnit)
+    androidTestImplementation(Dependencies.AndroidX.Test.runner)
+    androidTestImplementation(Dependencies.AndroidX.Test.Ext.jUnit)
 }
 
 afterEvaluate {

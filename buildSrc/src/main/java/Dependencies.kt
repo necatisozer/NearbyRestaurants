@@ -84,6 +84,14 @@ object Dependencies {
         const val material = "com.google.android.material:material:$version"
     }
 
+    object KotlinX {
+        object Coroutines {
+            private const val version = "1.3.8"
+            const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
+            const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
+        }
+    }
+
     object Dagger {
         const val version = "2.28-alpha"
         const val hiltAndroid = "com.google.dagger:hilt-android:$version"
