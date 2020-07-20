@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
+    kotlin("plugin.serialization")
     id("kotlin-android-extensions")
     id("androidx.navigation.safeargs.kotlin")
     id("dagger.hilt.android.plugin")
@@ -57,6 +58,9 @@ dependencies {
     implementation(project(":native-lib"))
     implementation(project(":domain"))
     implementation(project(":core"))
+
+    // KotlinX
+    implementation(Dependencies.KotlinX.Serialization.runtime)
 
     // AndroidX
     implementation(Dependencies.AndroidX.Activity.activity)

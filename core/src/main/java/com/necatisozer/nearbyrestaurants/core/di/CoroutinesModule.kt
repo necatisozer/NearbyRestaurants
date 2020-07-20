@@ -14,19 +14,19 @@ object CoroutinesModule {
 
     @get:Provides
     @DefaultDispatcher
-    val defaultDispatcher: CoroutineDispatcher = Dispatchers.Default
+    internal val defaultDispatcher: CoroutineDispatcher = Dispatchers.Default
 
     @get:Provides
     @IoDispatcher
-    val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
+    internal val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 
     @get:Provides
     @MainDispatcher
-    val mainDispatcher: CoroutineDispatcher = Dispatchers.Main
+    internal val mainDispatcher: CoroutineDispatcher = Dispatchers.Main
 
     @get:Provides
     @MainImmediateDispatcher
-    val mainImmediateDispatcher: CoroutineDispatcher = Dispatchers.Main.immediate
+    internal val mainImmediateDispatcher: CoroutineDispatcher = Dispatchers.Main.immediate
 }
 
 @Retention(AnnotationRetention.BINARY)

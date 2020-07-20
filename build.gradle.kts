@@ -5,6 +5,7 @@ plugins {
     id("com.android.library") version PluginVersions.gradle apply false
     kotlin("android") version PluginVersions.kotlin apply false
     kotlin("kapt") version PluginVersions.kotlin apply false
+    kotlin("plugin.serialization") version PluginVersions.kotlin apply false
     id("io.gitlab.arturbosch.detekt") version PluginVersions.detekt
     id("org.jlleitschuh.gradle.ktlint") version PluginVersions.ktlint
     id("com.github.ben-manes.versions") version PluginVersions.gradleVersions

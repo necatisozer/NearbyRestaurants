@@ -3,6 +3,7 @@ version = ProjectSettings.NativeLib.versionName
 plugins {
     id("com.android.library")
     kotlin("android")
+    kotlin("kapt")
     id("kotlin-android-extensions")
     id("maven-publish")
 }
@@ -51,6 +52,15 @@ android {
         isWarningsAsErrors = true
         isAbortOnError = true
     }
+}
+
+dependencies {
+    // Module
+    implementation(project(":core"))
+
+    // Hilt
+    implementation(Dependencies.Dagger.hiltAndroid)
+    kapt(Dependencies.Dagger.hiltAndroidCompiler)
 }
 
 afterEvaluate {

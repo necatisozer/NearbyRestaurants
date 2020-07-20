@@ -4,6 +4,7 @@ plugins {
     id("com.android.library")
     kotlin("android")
     kotlin("kapt")
+    kotlin("plugin.serialization")
     id("kotlin-android-extensions")
     id("maven-publish")
 }
@@ -50,6 +51,9 @@ android {
 dependencies {
     // Module
     implementation(project(":core"))
+
+    // KotlinX
+    implementation(Dependencies.KotlinX.Serialization.runtime)
 
     // Hilt
     implementation(Dependencies.Dagger.hiltAndroid)

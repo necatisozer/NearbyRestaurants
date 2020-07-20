@@ -90,6 +90,11 @@ object Dependencies {
             const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
             const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
         }
+
+        object Serialization {
+            private const val version = "0.20.0"
+            const val runtime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$version"
+        }
     }
 
     object Dagger {
@@ -98,11 +103,21 @@ object Dependencies {
         const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:$version"
     }
 
-    object Google {
-        object Places {
-            const val version = "2.3.0"
-            const val places = "com.google.android.libraries.places:places:$version"
-        }
+    object Retrofit {
+        private const val version = "2.9.0"
+        const val retrofit = "com.squareup.retrofit2:retrofit:$version"
+    }
+
+    object RetrofitKotlinXSerializationConverter {
+        private const val version = "0.5.0"
+        const val serializationConverter =
+            "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$version"
+    }
+
+    object OkHttp {
+        private const val version = "4.8.0"
+        const val okhttp = "com.squareup.okhttp3:okhttp:$version"
+        const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$version"
     }
 
     object Tools {

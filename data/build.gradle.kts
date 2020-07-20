@@ -4,6 +4,7 @@ plugins {
     id("com.android.library")
     kotlin("android")
     kotlin("kapt")
+    kotlin("plugin.serialization")
     id("kotlin-android-extensions")
     id("maven-publish")
 }
@@ -52,15 +53,21 @@ dependencies {
     implementation(project(":native-lib"))
     implementation(project(":core"))
 
+    // KotlinX
+    implementation(Dependencies.KotlinX.Serialization.runtime)
+
     // AndroidX
     implementation(Dependencies.AndroidX.Startup.startup)
-
-    // Google
-    api(Dependencies.Google.Places.places)
 
     // Hilt
     implementation(Dependencies.Dagger.hiltAndroid)
     kapt(Dependencies.Dagger.hiltAndroidCompiler)
+
+    // Networking
+    api(Dependencies.Retrofit.retrofit)
+    api(Dependencies.OkHttp.okhttp)
+    api(Dependencies.OkHttp.loggingInterceptor)
+    implementation(Dependencies.RetrofitKotlinXSerializationConverter.serializationConverter)
 
     // Test
     testImplementation(Dependencies.JUnit.jUnit)
