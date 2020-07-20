@@ -4,6 +4,7 @@ import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFact
 import com.necatisozer.nearbyrestaurants.data.BuildConfig
 import com.necatisozer.nearbyrestaurants.data.PlacesApi
 import com.necatisozer.nearbyrestaurants.data.RequestInterceptor
+import com.necatisozer.nearbyrestaurants.nativelib.BaseUrl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -57,11 +58,12 @@ object ApiModule {
     @Provides
     @Singleton
     internal fun provideRetrofit(
+        @BaseUrl baseUrl: String,
         okHttpClient: OkHttpClient,
         json: Json
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://maps.googleapis.com/maps/api/place/")
+            .baseUrl(baseUrl)
             .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
             .client(okHttpClient)
             .build()

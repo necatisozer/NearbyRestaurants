@@ -16,11 +16,20 @@ object ApiKeysModule {
     @PlacesApiKey
     external fun getPlacesApiKey(): String
 
+    @Provides
+    @Singleton
+    @BaseUrl
+    external fun getBaseUrl(): String
+
     init {
-        System.loadLibrary("api-keys")
+        System.loadLibrary("secrets")
     }
 }
 
 @Retention(AnnotationRetention.BINARY)
 @Qualifier
 annotation class PlacesApiKey
+
+@Retention(AnnotationRetention.BINARY)
+@Qualifier
+annotation class BaseUrl
