@@ -71,4 +71,3 @@ object ApiModule {
     @Singleton
     internal fun providePlacesApi(retrofit: Retrofit): PlacesApi = retrofit.create()
 }
-
