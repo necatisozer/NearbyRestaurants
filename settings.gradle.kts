@@ -21,5 +21,7 @@ rootProject.name = ("nearby-restaurants")
 
 include(
     "app",
-    "library"
+    "library",
+    "data",
+    "native-lib"
 )

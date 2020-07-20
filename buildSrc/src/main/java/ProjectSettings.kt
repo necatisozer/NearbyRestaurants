@@ -11,4 +11,14 @@ object ProjectSettings {
         const val versionName = "1.0.0"
         const val versionCode = 1
     }
+
+    object Data {
+        const val versionName = "1.0.0"
+        const val versionCode = 1
+    }
+
+    object NativeLib {
+        const val versionName = "1.0.0"
+        const val versionCode = 1
+    }
 }

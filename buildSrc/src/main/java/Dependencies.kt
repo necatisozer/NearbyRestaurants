@@ -56,6 +56,11 @@ object Dependencies {
             const val recyclerview = "androidx.recyclerview:recyclerview:$version"
         }
 
+        object Startup {
+            private const val version = "1.0.0-alpha01"
+            const val startup = "androidx.startup:startup-runtime:$version"
+        }
+
         object Test {
             private const val version = "1.3.0-rc01"
 
@@ -83,6 +88,13 @@ object Dependencies {
         const val version = "2.28-alpha"
         const val hiltAndroid = "com.google.dagger:hilt-android:$version"
         const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:$version"
+    }
+
+    object Google {
+        object Places {
+            const val version = "2.3.0"
+            const val places = "com.google.android.libraries.places:places:$version"
+        }
     }
 
     object Tools {

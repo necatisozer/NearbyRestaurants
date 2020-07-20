@@ -1,10 +1,11 @@
+version = ProjectSettings.Data.versionName
+
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
     kotlin("kapt")
     id("kotlin-android-extensions")
-    id("androidx.navigation.safeargs.kotlin")
-    id("dagger.hilt.android.plugin")
+    id("maven-publish")
 }
 
 android {
@@ -14,14 +15,14 @@ android {
         minSdkVersion(SdkVersions.minSdkVersion)
         targetSdkVersion(SdkVersions.targetSdkVersion)
 
-        applicationId = ProjectSettings.App.applicationId
-        versionCode = ProjectSettings.App.versionCode
-        versionName = ProjectSettings.App.versionName
+        versionCode = ProjectSettings.Data.versionCode
+        versionName = ProjectSettings.Data.versionName
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     compileOptions {
-        coreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -43,7 +44,6 @@ android {
     lintOptions {
         isWarningsAsErrors = true
         isAbortOnError = true
-        lintConfig = file(".lint/lint.xml")
     }
 }
 
@@ -55,26 +55,13 @@ dependencies {
     coreLibraryDesugaring(Dependencies.Tools.desugarJdkLibs)
 
     // Module
-    implementation(project(":library"))
-    implementation(project(":data"))
     implementation(project(":native-lib"))
 
     // AndroidX
-    implementation(Dependencies.AndroidX.Activity.activity)
-    implementation(Dependencies.AndroidX.Appcompat.appcompat)
-    implementation(Dependencies.AndroidX.ConstraintLayout.constraintLayout)
-    implementation(Dependencies.AndroidX.Core.core)
-    implementation(Dependencies.AndroidX.Fragment.fragment)
-    implementation(Dependencies.AndroidX.Hilt.viewModel)
-    kapt(Dependencies.AndroidX.Hilt.compiler)
-    implementation(Dependencies.AndroidX.Lifecycle.viewModel)
-    implementation(Dependencies.AndroidX.Lifecycle.liveData)
-    implementation(Dependencies.AndroidX.Lifecycle.common)
-    implementation(Dependencies.AndroidX.Navigation.fragment)
-    implementation(Dependencies.AndroidX.Navigation.ui)
+    implementation(Dependencies.AndroidX.Startup.startup)
 
-    // Material
-    implementation(Dependencies.Material.material)
+    // Google
+    api(Dependencies.Google.Places.places)
 
     // Hilt
     implementation(Dependencies.Dagger.hiltAndroid)
@@ -82,7 +69,16 @@ dependencies {
 
     // Test
     testImplementation(Dependencies.JUnit.jUnit)
+    androidTestImplementation(Dependencies.AndroidX.Test.runner)
     androidTestImplementation(Dependencies.AndroidX.Test.Ext.jUnit)
-    androidTestImplementation(Dependencies.AndroidX.Test.rules)
-    androidTestImplementation(Dependencies.AndroidX.Test.Espresso.core)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+            }
+        }
+    }
 }
