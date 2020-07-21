@@ -1,4 +1,4 @@
-package com.necatisozer.nearbyrestaurants.data
+package com.necatisozer.nearbyrestaurants.data.api
 
 import com.necatisozer.nearbyrestaurants.data.model.NearbyPlacesResponse
 import retrofit2.http.GET
@@ -10,7 +10,6 @@ interface PlacesApi {
     suspend fun searchNearbyPlaces(
         @Query("location") location: String,
         @Query("radius") radius: Int,
-        @Query("language") language: String? = null,
         @Query("type") type: String? = null
     ): NearbyPlacesResponse
 }

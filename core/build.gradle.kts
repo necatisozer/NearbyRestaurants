@@ -52,8 +52,8 @@ dependencies {
     api(kotlin("stdlib-jdk7"))
 
     // KotlinX
-    api((Dependencies.KotlinX.Coroutines.core))
-    api((Dependencies.KotlinX.Coroutines.android))
+    api(Dependencies.KotlinX.Coroutines.core)
+    api(Dependencies.KotlinX.Coroutines.android)
 
     // Hilt
     implementation(Dependencies.Dagger.hiltAndroid)

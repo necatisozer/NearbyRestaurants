@@ -26,7 +26,7 @@ data class Result(
     @SerialName("price_level")
     val priceLevel: Int? = null,
     @SerialName("rating")
-    val rating: Int? = null,
+    val rating: Double? = null,
     @SerialName("reference")
     val reference: String? = null,
     @SerialName("scope")

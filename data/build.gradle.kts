@@ -52,6 +52,7 @@ dependencies {
     // Module
     implementation(project(":native-lib"))
     implementation(project(":core"))
+    implementation(project(":domain"))
 
     // KotlinX
     implementation(Dependencies.KotlinX.Serialization.runtime)

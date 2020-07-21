@@ -2,8 +2,8 @@ package com.necatisozer.nearbyrestaurants.data.di
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.necatisozer.nearbyrestaurants.data.BuildConfig
-import com.necatisozer.nearbyrestaurants.data.PlacesApi
-import com.necatisozer.nearbyrestaurants.data.RequestInterceptor
+import com.necatisozer.nearbyrestaurants.data.api.PlacesApi
+import com.necatisozer.nearbyrestaurants.data.util.RequestInterceptor
 import com.necatisozer.nearbyrestaurants.nativelib.BaseUrl
 import dagger.Module
 import dagger.Provides

@@ -1,4 +1,4 @@
-package com.necatisozer.nearbyrestaurants.data
+package com.necatisozer.nearbyrestaurants.data.util
 
 import com.necatisozer.nearbyrestaurants.nativelib.PlacesApiKey
 import okhttp3.Interceptor
