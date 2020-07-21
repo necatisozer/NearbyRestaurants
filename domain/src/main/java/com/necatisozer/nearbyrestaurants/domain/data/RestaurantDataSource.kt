@@ -1,6 +1,6 @@
 package com.necatisozer.nearbyrestaurants.domain.data
 
-import com.necatisozer.nearbyrestaurants.domain.model.Location
+import android.location.Location
 import com.necatisozer.nearbyrestaurants.domain.model.Radius
 import com.necatisozer.nearbyrestaurants.domain.model.Restaurant
 import com.necatisozer.nearbyrestaurants.domain.model.RestaurantDetails

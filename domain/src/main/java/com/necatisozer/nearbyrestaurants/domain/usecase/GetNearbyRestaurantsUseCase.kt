@@ -1,11 +1,11 @@
 package com.necatisozer.nearbyrestaurants.domain.usecase
 
+import android.location.Location
 import com.necatisozer.nearbyrestaurants.core.di.DefaultDispatcher
 import com.necatisozer.nearbyrestaurants.domain.data.RestaurantDataSource
 import com.necatisozer.nearbyrestaurants.domain.data.RestaurantDatabase
 import com.necatisozer.nearbyrestaurants.domain.extension.flatMapConcatSuccess
 import com.necatisozer.nearbyrestaurants.domain.extension.onSuccess
-import com.necatisozer.nearbyrestaurants.domain.model.Location
 import com.necatisozer.nearbyrestaurants.domain.model.Radius
 import com.necatisozer.nearbyrestaurants.domain.model.Restaurant
 import com.necatisozer.nearbyrestaurants.domain.model.Result

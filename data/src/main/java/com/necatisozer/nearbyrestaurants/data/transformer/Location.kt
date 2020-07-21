@@ -1,5 +1,5 @@
 package com.necatisozer.nearbyrestaurants.data.transformer
 
-import com.necatisozer.nearbyrestaurants.domain.model.Location
+import android.location.Location
 
 fun Location.asString() = "$latitude,$longitude"

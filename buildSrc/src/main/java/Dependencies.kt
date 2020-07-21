@@ -97,12 +97,27 @@ object Dependencies {
             private const val version = "1.3.8"
             const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
             const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
+            const val playServices = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$version"
         }
 
         object Serialization {
             private const val version = "0.20.0"
             const val runtime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$version"
         }
+    }
+
+    object PlayServices{
+        object Location {
+            private const val version = "17.0.0"
+            const val location = "com.google.android.gms:play-services-location:$version"
+        }
+    }
+
+    object Assent {
+        const val version = "3.0.0-RC4"
+        const val core = "com.afollestad.assent:core:$version"
+        const val rationales = "com.afollestad.assent:rationales:$version"
+        const val coroutines = "com.afollestad.assent:coroutines:$version"
     }
 
     object Dagger {

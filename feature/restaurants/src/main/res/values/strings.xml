@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="location_permission_rationale_title">Location needed!</string>
+    <string name="location_permission_rationale_message">Please grant location permission for nearby restaurants!</string>
+    <string name="error_location_permission">Location permission denied!</string>
+    <string name="error_location_fetch">Location cannot be fetched!</string>
+</resources>

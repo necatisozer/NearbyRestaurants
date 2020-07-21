@@ -69,12 +69,23 @@ dependencies {
     implementation(Dependencies.AndroidX.Lifecycle.liveData)
     implementation(Dependencies.AndroidX.Lifecycle.common)
 
+    // KotlinX
+    implementation(Dependencies.KotlinX.Coroutines.playServices)
+
     // Material
     implementation(Dependencies.Material.material)
+
+    // Play Services
+    implementation(Dependencies.PlayServices.Location.location)
 
     // Hilt
     implementation(Dependencies.Dagger.hiltAndroid)
     kapt(Dependencies.Dagger.hiltAndroidCompiler)
+
+    // Assent
+    implementation(Dependencies.Assent.core)
+    implementation(Dependencies.Assent.rationales)
+    implementation(Dependencies.Assent.coroutines)
 
     // Test
     testImplementation(Dependencies.JUnit.jUnit)
