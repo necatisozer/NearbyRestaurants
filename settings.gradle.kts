@@ -25,5 +25,6 @@ include(
     "data",
     "native-lib",
     "domain",
-    "core"
+    "core",
+    "database"
 )

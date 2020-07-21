@@ -56,6 +56,14 @@ object Dependencies {
             const val recyclerview = "androidx.recyclerview:recyclerview:$version"
         }
 
+        object Room {
+            private const val version = "2.2.5"
+            const val runtime = "androidx.room:room-runtime:$version"
+            const val compiler = "androidx.room:room-compiler:$version"
+            const val ktx = "androidx.room:room-ktx:$version"
+            const val testing = "androidx.room:room-testing:$version"
+        }
+
         object Startup {
             private const val version = "1.0.0-alpha01"
             const val startup = "androidx.startup:startup-runtime:$version"
