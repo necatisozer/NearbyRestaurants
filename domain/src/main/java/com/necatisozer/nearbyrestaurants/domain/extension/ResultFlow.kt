@@ -19,9 +19,10 @@ fun <T> resultFlow(block: suspend () -> T): Flow<Result<T>> {
     }
 }
 
-fun <T> Flow<Result<T>>.onSuccess(action: suspend (T) -> Unit): Flow<Result<T>> = onEach { result ->
-    if (result is Result.Success) action(result.data)
-}
+fun <T> Flow<Result<T>>.onSuccess(action: suspend (data: T) -> Unit): Flow<Result<T>> =
+    onEach { result ->
+        if (result is Result.Success) action(result.data)
+    }
 
 fun <T> Flow<Result<T>>.onError(action: suspend (Exception) -> Unit): Flow<Result<T>> =
     onEach { result ->
@@ -33,11 +34,11 @@ fun <T> Flow<Result<T>>.onLoading(action: suspend () -> Unit): Flow<Result<T>> =
 }
 
 fun <T, R> Flow<Result<T>>.flatMapConcatSuccess(
-    transform: suspend (value: Result.Success<T>) -> Flow<Result<R>>
+    transform: suspend (data: T) -> Flow<Result<R>>
 ): Flow<Result<R>> = flow {
     collect { result ->
         when (result) {
-            is Result.Success -> emitAll(transform(result))
+            is Result.Success -> emitAll(transform(result.data))
             is Result.Error -> emit(Result.Error(result.exception))
             is Result.Loading -> emit(Result.Loading)
         }
