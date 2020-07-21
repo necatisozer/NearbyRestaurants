@@ -13,5 +13,4 @@ interface DataSourceModule {
 
     @get:Binds
     val RestaurantDataSourceImpl.restaurantDataSourceImpl: RestaurantDataSource
-
 }
