@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Result(
+data class Place(
     @SerialName("business_status")
     val businessStatus: String? = null,
     @SerialName("geometry")
