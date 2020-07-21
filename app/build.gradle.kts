@@ -40,6 +40,8 @@ android {
         }
     }
 
+    ndkVersion = SdkVersions.ndkVersion
+
     lintOptions {
         isWarningsAsErrors = true
         isAbortOnError = true
