@@ -20,12 +20,13 @@ pluginManagement {
 rootProject.name = ("nearby-restaurants")
 
 include(
-    "app",
-    "library",
-    "data",
-    "native-lib",
-    "domain",
-    "core",
-    "database",
-    "navigation"
+    ":app",
+    ":library",
+    ":data",
+    ":native-lib",
+    ":domain",
+    ":core",
+    ":database",
+    ":navigation",
+    ":feature:restaurants"
 )

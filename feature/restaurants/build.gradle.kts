@@ -1,11 +1,12 @@
-version = ProjectSettings.Navigation.versionName
+version = ProjectSettings.Feature.Restaurants.versionName
 
 plugins {
     id("com.android.library")
     kotlin("android")
+    kotlin("kapt")
     id("kotlin-android-extensions")
     id("maven-publish")
-    id("androidx.navigation.safeargs.kotlin")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -15,8 +16,8 @@ android {
         minSdkVersion(SdkVersions.minSdkVersion)
         targetSdkVersion(SdkVersions.targetSdkVersion)
 
-        versionCode = ProjectSettings.Navigation.versionCode
-        versionName = ProjectSettings.Navigation.versionName
+        versionCode = ProjectSettings.Feature.Restaurants.versionCode
+        versionName = ProjectSettings.Feature.Restaurants.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -54,10 +55,26 @@ dependencies {
 
     // Module
     implementation(project(":core"))
+    implementation(project(":domain"))
+    implementation(project(":navigation"))
 
     // AndroidX
-    api(Dependencies.AndroidX.Navigation.fragment)
-    api(Dependencies.AndroidX.Navigation.ui)
+    implementation(Dependencies.AndroidX.Appcompat.appcompat)
+    implementation(Dependencies.AndroidX.ConstraintLayout.constraintLayout)
+    implementation(Dependencies.AndroidX.Core.core)
+    implementation(Dependencies.AndroidX.Fragment.fragment)
+    implementation(Dependencies.AndroidX.Hilt.viewModel)
+    kapt(Dependencies.AndroidX.Hilt.compiler)
+    implementation(Dependencies.AndroidX.Lifecycle.viewModel)
+    implementation(Dependencies.AndroidX.Lifecycle.liveData)
+    implementation(Dependencies.AndroidX.Lifecycle.common)
+
+    // Material
+    implementation(Dependencies.Material.material)
+
+    // Hilt
+    implementation(Dependencies.Dagger.hiltAndroid)
+    kapt(Dependencies.Dagger.hiltAndroidCompiler)
 
     // Test
     testImplementation(Dependencies.JUnit.jUnit)

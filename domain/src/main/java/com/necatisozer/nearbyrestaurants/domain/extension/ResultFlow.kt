@@ -23,6 +23,15 @@ fun <T> Flow<Result<T>>.onSuccess(action: suspend (T) -> Unit): Flow<Result<T>> 
     if (result is Result.Success) action(result.data)
 }
 
+fun <T> Flow<Result<T>>.onError(action: suspend (Exception) -> Unit): Flow<Result<T>> =
+    onEach { result ->
+        if (result is Result.Error) action(result.exception)
+    }
+
+fun <T> Flow<Result<T>>.onLoading(action: suspend () -> Unit): Flow<Result<T>> = onEach { result ->
+    if (result is Result.Loading) action()
+}
+
 fun <T, R> Flow<Result<T>>.flatMapConcatSuccess(
     transform: suspend (value: Result.Success<T>) -> Flow<Result<R>>
 ): Flow<Result<R>> = flow {

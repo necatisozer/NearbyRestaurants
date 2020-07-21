@@ -23,6 +23,7 @@ android {
     }
 
     compileOptions {
+        coreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -50,6 +51,9 @@ android {
 dependencies {
     // Kotlin
     api(kotlin("stdlib-jdk7"))
+
+    // Java
+    coreLibraryDesugaring(Dependencies.Tools.desugarJdkLibs)
 
     // KotlinX
     api(Dependencies.KotlinX.Coroutines.core)

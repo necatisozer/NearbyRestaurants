@@ -41,4 +41,11 @@ object ProjectSettings {
         const val versionName = "1.0.0"
         const val versionCode = 1
     }
+
+    object Feature{
+        object Restaurants {
+            const val versionName = "1.0.0"
+            const val versionCode = 1
+        }
+    }
 }

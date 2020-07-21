@@ -59,6 +59,7 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":database"))
     implementation(project(":navigation"))
+    implementation(project(":feature:restaurants"))
 
     // KotlinX
     implementation(Dependencies.KotlinX.Serialization.runtime)
@@ -66,14 +67,10 @@ dependencies {
     // AndroidX
     implementation(Dependencies.AndroidX.Activity.activity)
     implementation(Dependencies.AndroidX.Appcompat.appcompat)
-    implementation(Dependencies.AndroidX.ConstraintLayout.constraintLayout)
     implementation(Dependencies.AndroidX.Core.core)
     implementation(Dependencies.AndroidX.Fragment.fragment)
     implementation(Dependencies.AndroidX.Hilt.viewModel)
     kapt(Dependencies.AndroidX.Hilt.compiler)
-    implementation(Dependencies.AndroidX.Lifecycle.viewModel)
-    implementation(Dependencies.AndroidX.Lifecycle.liveData)
-    implementation(Dependencies.AndroidX.Lifecycle.common)
 
     // Material
     implementation(Dependencies.Material.material)

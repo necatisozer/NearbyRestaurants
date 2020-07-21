@@ -6,6 +6,7 @@ plugins {
     kotlin("kapt")
     id("kotlin-android-extensions")
     id("maven-publish")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -23,6 +24,7 @@ android {
     }
 
     compileOptions {
+        coreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -56,6 +58,9 @@ android {
 }
 
 dependencies {
+    // Java
+    coreLibraryDesugaring(Dependencies.Tools.desugarJdkLibs)
+
     // Module
     implementation(project(":core"))
 

@@ -1,4 +1,4 @@
-package com.necatisozer.nearbyrestaurants.app
+package com.necatisozer.nearbyrestaurants.feature.restaurants.ui
 
 import android.os.Bundle
 import android.view.View
@@ -8,12 +8,13 @@ import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import com.necatisozer.nearbyrestaurants.feature.restaurants.R
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_main.*
+import kotlinx.android.synthetic.main.fragment_restaurants.*
 
 @AndroidEntryPoint
-class MainFragment : Fragment(R.layout.fragment_main) {
-    private val viewModel: MainViewModel by viewModels()
+class RestaurantsFragment : Fragment(R.layout.fragment_restaurants) {
+    private val viewModel: RestaurantsViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
