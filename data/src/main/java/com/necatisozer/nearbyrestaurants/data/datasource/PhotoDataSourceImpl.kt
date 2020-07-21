@@ -1,8 +1,8 @@
 package com.necatisozer.nearbyrestaurants.data.datasource
 
 import com.necatisozer.nearbyrestaurants.data.api.PlacesApi
-import com.necatisozer.nearbyrestaurants.data.util.resultFlow
 import com.necatisozer.nearbyrestaurants.domain.data.PhotoDataSource
+import com.necatisozer.nearbyrestaurants.domain.extension.resultFlow
 import com.necatisozer.nearbyrestaurants.domain.model.PhotoId
 import com.necatisozer.nearbyrestaurants.domain.model.PhotoSize
 import com.necatisozer.nearbyrestaurants.domain.model.PhotoUrl

@@ -58,7 +58,7 @@ dependencies {
     implementation(project(":domain"))
 
     // AndroidX
-    implementation(Dependencies.AndroidX.Room.runtime)
+    api(Dependencies.AndroidX.Room.runtime)
     kapt(Dependencies.AndroidX.Room.compiler)
     implementation(Dependencies.AndroidX.Room.ktx)
 

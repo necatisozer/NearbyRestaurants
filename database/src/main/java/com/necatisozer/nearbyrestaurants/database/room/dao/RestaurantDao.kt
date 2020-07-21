@@ -1,11 +1,11 @@
-package com.necatisozer.nearbyrestaurants.database.dao
+package com.necatisozer.nearbyrestaurants.database.room.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
-import com.necatisozer.nearbyrestaurants.database.entity.Restaurant
+import com.necatisozer.nearbyrestaurants.database.room.entity.Restaurant
 import kotlinx.coroutines.flow.Flow
 
 @Dao

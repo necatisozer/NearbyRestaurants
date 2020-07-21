@@ -1,16 +1,16 @@
-package com.necatisozer.nearbyrestaurants.database.db
+package com.necatisozer.nearbyrestaurants.database.room
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.necatisozer.nearbyrestaurants.database.dao.RestaurantDao
-import com.necatisozer.nearbyrestaurants.database.entity.Restaurant
+import com.necatisozer.nearbyrestaurants.database.room.dao.RestaurantDao
+import com.necatisozer.nearbyrestaurants.database.room.entity.Restaurant
 
 @Database(
     entities = [Restaurant::class],
     version = 1,
     exportSchema = true
 )
-abstract class RestaurantsDatabase : RoomDatabase() {
+abstract class RestaurantsRoomDatabase : RoomDatabase() {
 
     abstract fun restaurantDao(): RestaurantDao
 

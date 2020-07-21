@@ -1,4 +1,4 @@
-package com.necatisozer.nearbyrestaurants.database.entity
+package com.necatisozer.nearbyrestaurants.database.room.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

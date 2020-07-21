@@ -4,8 +4,8 @@ import com.necatisozer.nearbyrestaurants.core.extension.illegalArg
 import com.necatisozer.nearbyrestaurants.data.api.PlacesApi
 import com.necatisozer.nearbyrestaurants.data.transformer.asRestaurantDetails
 import com.necatisozer.nearbyrestaurants.data.transformer.asString
-import com.necatisozer.nearbyrestaurants.data.util.resultFlow
 import com.necatisozer.nearbyrestaurants.domain.data.RestaurantDataSource
+import com.necatisozer.nearbyrestaurants.domain.extension.resultFlow
 import com.necatisozer.nearbyrestaurants.domain.model.Location
 import com.necatisozer.nearbyrestaurants.domain.model.Radius
 import com.necatisozer.nearbyrestaurants.domain.model.Restaurant
