@@ -8,11 +8,11 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.onEach
 
 @Suppress("TooGenericExceptionCaught")
-fun <T> resultFlow(call: suspend () -> T): Flow<Result<T>> {
+fun <T> resultFlow(block: suspend () -> T): Flow<Result<T>> {
     return flow {
         emit(Result.Loading)
         try {
-            emit(Result.Success(call()))
+            emit(Result.Success(block()))
         } catch (exception: Exception) {
             emit(Result.Error(exception))
         }

@@ -15,14 +15,15 @@ class RequestInterceptor @Inject constructor(
 
         val url = request.url
             .newBuilder()
-            .addPathSegment("json")
-            .addQueryParameter(PARAMETER_KEY, apiKey)
+            .addPathSegment(PATH_SEGMENT_JSON)
+            .addQueryParameter(QUERY_PARAMETER_KEY, apiKey)
             .build()
 
         return chain.proceed(request.newBuilder().url(url).build())
     }
 
     companion object {
-        private const val PARAMETER_KEY = "key"
+        private const val PATH_SEGMENT_JSON = "json"
+        private const val QUERY_PARAMETER_KEY = "key"
     }
 }

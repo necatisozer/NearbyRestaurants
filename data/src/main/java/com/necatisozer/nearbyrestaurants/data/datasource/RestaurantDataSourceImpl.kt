@@ -3,6 +3,7 @@ package com.necatisozer.nearbyrestaurants.data.datasource
 import android.location.Location
 import com.necatisozer.nearbyrestaurants.core.extension.illegalArg
 import com.necatisozer.nearbyrestaurants.data.api.PlacesApi
+import com.necatisozer.nearbyrestaurants.data.transformer.asRestaurant
 import com.necatisozer.nearbyrestaurants.data.transformer.asRestaurantDetails
 import com.necatisozer.nearbyrestaurants.data.transformer.asString
 import com.necatisozer.nearbyrestaurants.domain.data.RestaurantDataSource
@@ -26,7 +27,7 @@ class RestaurantDataSourceImpl @Inject constructor(
     ): Flow<Result<List<Restaurant>>> = resultFlow {
         val response =
             placesApi.searchNearbyPlaces(location.asString(), radius.value, TYPE_RESTAURANT)
-        val restaurants = response.results?.map { it.asRestaurantDetails() }
+        val restaurants = response.results?.map { it.asRestaurant() }
         return@resultFlow restaurants.orEmpty()
     }
 

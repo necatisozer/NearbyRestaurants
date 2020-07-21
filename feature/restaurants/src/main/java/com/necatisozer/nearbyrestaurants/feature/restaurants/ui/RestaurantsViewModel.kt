@@ -26,7 +26,7 @@ class RestaurantsViewModel @ViewModelInject constructor(
             .onSuccess { restaurants ->
                 _stateFlow.value = restaurants.joinToString("\n") { it.name }
             }
-            .onError { _stateFlow.value = it.message.orEmpty() }
+            .onError { _stateFlow.value = it.message ?: "An Error Occurred!" }
             .launchIn(viewModelScope)
     }
 }
