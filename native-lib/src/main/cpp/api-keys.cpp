@@ -3,8 +3,8 @@
 
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_necatisozer_nearbyrestaurants_nativelib_ApiKeysModule_getPlacesApiKey(
-        JNIEnv* env,
-        jobject /* this */) {
-    std::string places_api_key = "AIzaSyBDKR8COabQ96Y42RNgrIfIICsAV1JHbjs";
-    return env->NewStringUTF(places_api_key.c_str());
+    JNIEnv *env,
+    jobject /* this */) {
+  std::string places_api_key = "YOUR_API_KEY";
+  return env->NewStringUTF(places_api_key.c_str());
 }
