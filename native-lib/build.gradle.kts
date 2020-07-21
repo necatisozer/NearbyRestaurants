@@ -41,6 +41,8 @@ android {
         }
     }
 
+    ndkVersion = SdkVersions.ndkVersion
+
     externalNativeBuild {
         cmake {
             setPath("src/main/cpp/CMakeLists.txt")
