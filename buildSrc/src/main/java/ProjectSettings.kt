@@ -36,4 +36,9 @@ object ProjectSettings {
         const val versionName = "1.0.0"
         const val versionCode = 1
     }
+
+    object Navigation {
+        const val versionName = "1.0.0"
+        const val versionCode = 1
+    }
 }

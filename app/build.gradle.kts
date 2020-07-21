@@ -4,7 +4,6 @@ plugins {
     kotlin("kapt")
     kotlin("plugin.serialization")
     id("kotlin-android-extensions")
-    id("androidx.navigation.safeargs.kotlin")
     id("dagger.hilt.android.plugin")
 }
 
@@ -59,6 +58,7 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":core"))
     implementation(project(":database"))
+    implementation(project(":navigation"))
 
     // KotlinX
     implementation(Dependencies.KotlinX.Serialization.runtime)
@@ -74,8 +74,6 @@ dependencies {
     implementation(Dependencies.AndroidX.Lifecycle.viewModel)
     implementation(Dependencies.AndroidX.Lifecycle.liveData)
     implementation(Dependencies.AndroidX.Lifecycle.common)
-    implementation(Dependencies.AndroidX.Navigation.fragment)
-    implementation(Dependencies.AndroidX.Navigation.ui)
 
     // Material
     implementation(Dependencies.Material.material)
