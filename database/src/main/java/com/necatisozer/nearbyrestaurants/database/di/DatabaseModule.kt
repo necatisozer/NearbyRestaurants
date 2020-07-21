@@ -13,5 +13,4 @@ interface DatabaseModule {
 
     @get:Binds
     val RestaurantDatabaseImpl.restaurantDatabaseImpl: RestaurantDatabase
-
 }
