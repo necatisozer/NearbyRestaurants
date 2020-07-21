@@ -6,7 +6,6 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
@@ -18,6 +17,8 @@ import com.google.android.gms.location.LocationServices
 import com.necatisozer.nearbyrestaurants.feature.restaurants.R
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_restaurants.*
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.tasks.await
 
 @AndroidEntryPoint
@@ -31,7 +32,9 @@ class RestaurantsFragment : Fragment(R.layout.fragment_restaurants) {
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         toolbar.setupWithNavController(navController, appBarConfiguration)
 
-        viewModel.liveData.observe(viewLifecycleOwner, textView::setText)
+        viewModel.liveData
+            .onEach { textView.text = it }
+            .launchIn(viewLifecycleOwner.lifecycleScope)
 
         requestLocation()
     }
