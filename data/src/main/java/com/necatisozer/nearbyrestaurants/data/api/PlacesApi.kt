@@ -12,4 +12,11 @@ interface PlacesApi {
         @Query("radius") radius: Int,
         @Query("type") type: String? = null
     ): NearbyPlacesResponse
+
+    @GET("photo")
+    suspend fun getPhoto(
+        @Query("photoreference") photoReference: String,
+        @Query("maxheight") maxheight: Int? = null,
+        @Query("maxwidth") maxwidth: Int? = null
+    ): String
 }
